@@ -1,5 +1,6 @@
 class Admin::JobsController < ApplicationController
   before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy]
+  before_action :require_is_admin
 
   def index
     @jobs = Job.all
@@ -42,6 +43,8 @@ class Admin::JobsController < ApplicationController
   end
 
   private
+
+
 
   def job_params
     params.require(:job).permit(:title, :description)
