@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create!(email: 'clx@test.com',
-             admin: true,
-             password: 'password',
-             password_confirmation: 'password')
+            is_admin: true,
+            password: '123456',
+            password_confirmation: '123456')
