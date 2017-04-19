@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>JobListing</title>
       <%= csrf_meta_tags %>
 
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -13,9 +16,9 @@
     <div class="container-fluid">
       <div class="row">
         <%= render "common/navbar" %>
-      </div>
         <%= render "common/flashes" %>
         <%= yield %>
+      </div>
     </div>
 
         <%= render "common/footer" %>
