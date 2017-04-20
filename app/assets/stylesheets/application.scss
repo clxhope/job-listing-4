@@ -23,7 +23,10 @@
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
+  background-color: #212121;  //背景颜色
+  border-color: #212121; //边框色
 }
+
 
 /* Add a gray background color and some padding to the footer */
 footer {
@@ -34,7 +37,6 @@ footer {
 .carousel-inner img {
     width: 100%; /* Set width to 100% */
     margin: auto;
-    min-height:200px;
 }
 
 @media (max-width: 600px) {
