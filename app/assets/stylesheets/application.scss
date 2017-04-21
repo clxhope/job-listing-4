@@ -21,19 +21,23 @@
 
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
-  margin-bottom: 0;
-  border-radius: 0;
-  background-color: #212121;  //背景颜色
-  border-color: #212121; //边框色
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #2d2d30;  //背景颜色
+    border-color: #2d2d30; //边框色
+    opacity: 0.9;
+    border: 0;
+    letter-spacing: 4px;
+    font-size: 12px !important;
 }
 
 
 /* Add a gray background color and some padding to the footer */
 footer {
-  background-color: #2d2d30;
-  color: #f5f5f5;
-  padding: 50px 0;
-  margin-top: -30px;
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+    margin-top: -30px;
 }
 
 .carousel-inner img {
@@ -62,6 +66,28 @@ h4 {
     font-style: italic;
 }
 
+.title{
+    font-size: 60px;
+    letter-spacing: 10px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.lead {
+      margin-bottom: 250px;
+      padding: 10px 30px;
+      border-radius: 4px;
+      letter-spacing: -1px;
+}
+
+.fubiaoti{
+    letter-spacing: 5px;
+    margin-bottom: 250px;
+    margin-top: 50px;
+    font-size: 20px;
+}
 .bg-grey {
     background-color: #f6f6f6;
 }
@@ -71,10 +97,10 @@ h4 {
 }
 
 .jumbotron {
-  background-image:url('http://ww4.sinaimg.cn/large/006tNbRwgy1feu8y34n2vj319u0ukdhu.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 100px;
+    background-image:url('http://ww4.sinaimg.cn/large/006tNbRwgy1feu8y34n2vj319u0ukdhu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 100px;
 }
 
 @media (max-width: 600px) {
