@@ -30,8 +30,10 @@
 
 /* Add a gray background color and some padding to the footer */
 footer {
-  background-color: #f2f2f2;
-  padding: 25px;
+  background-color: #2d2d30;
+  color: #f5f5f5;
+  padding: 50px 0;
+  margin-top: -30px;
 }
 
 .carousel-inner img {
@@ -46,8 +48,33 @@ h1 {
     color: #111;
 }
 
+h2 {
+    margin: 70px 0 70px 0;
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.bg-grey {
+    background-color: #f6f6f6;
+}
+
 .container {
     padding: 80px 120px;
+}
+
+.jumbotron {
+  background-image:url('http://ww4.sinaimg.cn/large/006tNbRwgy1feu8y34n2vj319u0ukdhu.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 100px;
 }
 
 @media (max-width: 600px) {
