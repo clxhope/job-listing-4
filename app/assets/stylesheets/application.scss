@@ -31,8 +31,29 @@
     font-size: 12px !important;
 }
 
+/* --将footer栏位固定在底部  */
+html {
+    height: 100%;
+}
+
 body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
     padding-top: 50px;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+    margin-top: 0px;
+    width:100%;
 }
 
 /* 自定义首页大图按钮 */
@@ -44,14 +65,6 @@ body {
     font-weight: 700;
     padding: 10px 30px;
     text-decoration: none !important; /* 去除点击链接时出现的下划线 */
-}
-
-/* Add a gray background color and some padding to the footer */
-footer {
-    background-color: #2d2d30;
-    color: #f5f5f5;
-    padding: 32px;
-    margin-top: -30px;
 }
 
 .carousel-inner img {
@@ -115,6 +128,8 @@ h4 {
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 100px;
+    margin-bottom: 0px;
+    border-radius: 0px;
 }
 
 @media (max-width: 600px) {
