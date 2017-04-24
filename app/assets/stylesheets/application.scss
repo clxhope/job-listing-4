@@ -35,6 +35,16 @@ body {
     padding-top: 50px;
 }
 
+/* 自定义首页大图按钮 */
+.jobseek-button, .jobseek-button:hover {
+    color: #08EFFA !important;
+    border: #08EFFA 2px solid !important;
+    border-radius: 4px;
+    background: none!important;
+    font-weight: 700;
+    padding: 10px 30px;
+    text-decoration: none !important; /* 去除点击链接时出现的下划线 */
+}
 
 /* Add a gray background color and some padding to the footer */
 footer {
