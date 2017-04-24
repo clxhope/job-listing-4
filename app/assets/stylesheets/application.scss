@@ -18,3 +18,131 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #2d2d30;  //背景颜色
+    border-color: #2d2d30; //边框色
+    opacity: 0.9;
+    border: 0;
+    letter-spacing: 4px;
+    font-size: 12px !important;
+}
+
+/* --将footer栏位固定在底部  */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+    margin-top: 0px;
+    width:100%;
+}
+
+/* 自定义首页大图按钮 */
+.jobseek-button, .jobseek-button:hover {
+    color: #08EFFA !important;
+    border: #08EFFA 2px solid !important;
+    border-radius: 4px;
+    background: none!important;
+    font-weight: 700;
+    padding: 10px 30px;
+    text-decoration: none !important; /* 去除点击链接时出现的下划线 */
+}
+
+/* 信息提示栏与头图衔接无缝隙 */
+.alert{
+    margin-bottom: 0px;
+}
+
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+
+h1 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;
+    font-size: 30px;
+    color: #111;
+}
+
+h2 {
+    margin: 70px 0 70px 0;
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.title{
+    font-size: 60px;
+    letter-spacing: 10px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.lead {
+      margin-bottom: 250px;
+      padding: 10px 30px;
+      border-radius: 4px;
+      letter-spacing: -1px;
+}
+
+.fubiaoti{
+    letter-spacing: 5px;
+    margin-bottom: 250px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+.bg-grey {
+    background-color: #f6f6f6;
+}
+
+.container {
+    padding: 80px 120px;
+}
+
+.jumbotron {
+    background-image:url('http://ww4.sinaimg.cn/large/006tNbRwgy1feu8y34n2vj319u0ukdhu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 100px;
+    margin-bottom: 0px;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+    border-radius: 0px;
+}
+
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+  }
+}
+/* Hide the carousel text when the screen is less than 600 pixels wide */

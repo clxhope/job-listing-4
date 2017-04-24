@@ -5,3 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+#这个种子档会建立一个admin账号，并创建10个pulic jobs和10个hidden jobs。
+User.create!(email: 'clx@test.com',
+            is_admin: true,
+            password: '123456',
+            password_confirmation: '123456')
+
+create_jobs = for i in 1..10 do
+  Job.create!([title: "Job no.#{i}",
+               description: "第 #{i} 個Public工作",
+               wage_upper_bound: rand(50..99)*100,
+               wage_lower_bound: rand(10..49)*100,
+               is_hidden: "false"])
+end
+puts "10 Public jobs created."
+
+create_jobs = for i in 1..10 do
+  Job.create!([title: "Job no.#{i+10}",
+               description: "第 #{i+10} 個Hidden工作",
+               wage_upper_bound: rand(50..99)*100,
+               wage_lower_bound: rand(10..49)*100,
+               is_hidden: "true"])
+end
+puts "10 Hidden jobs created."

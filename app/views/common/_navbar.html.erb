@@ -1,16 +1,16 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">Joblisting</a>
+      <a class="navbar-brand" href="/">FODEJO</a>
     </div>
 
     <!--Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if !current_user %>
-           <li><%= link_to("注册", new_user_registration_path) %></li>
-           <li><%= link_to("登入", new_user_session_path) %></li>
+           <li><%= link_to("SUGNUP", new_user_registration_path) %></li>
+           <li><%= link_to("LOGIN", new_user_session_path) %></li>
          <% else %>
            <li class="dropdown">
              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -21,7 +21,7 @@
                <% if current_user.admin? %>
                <li><%= link_to("Admin Panel", admin_jobs_path) %></li>
                <% end %>
-               <li><%= link_to("退出", destroy_user_session_path, method: :delete) %></li>
+               <li><%= link_to("Sign out", destroy_user_session_path, method: :delete) %></li>
              </ul>
            </li>
         <% end %>
