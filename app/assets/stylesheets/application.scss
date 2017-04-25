@@ -140,6 +140,42 @@ h4 {
     border-radius: 0px;
 }
 
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+
+.job-listings {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.col {
+    float: left;
+    padding: 0 15px;
+}
+
+.job-title {
+    width: 32%;
+    text-align: center;
+    line-height: 44px;
+}
+
+.job-wage {
+    width: 32%;
+    padding-top: 10px;
+}
+
+.job-date {
+    width: 36%;
+    padding-top: 10px;
+}
+
+.jobdot {
+    color: #000000;
+}
+
 @media (max-width: 600px) {
   .carousel-caption {
     display: none;
