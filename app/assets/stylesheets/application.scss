@@ -19,7 +19,8 @@
 @import "bootstrap";
 @import "font-awesome";
 
-/* Remove the navbar's default margin-bottom and rounded borders */
+/* --------------navbar、footer、flash部分--------------- */
+/* ----------导航栏----------- */
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
@@ -47,7 +48,6 @@ body {
     flex: 1;
 }
 
-/* Add a gray background color and some padding to the footer */
 footer {
     background-color: #2d2d30;
     color: #f5f5f5;
@@ -56,6 +56,40 @@ footer {
     width:100%;
 }
 
+/* 信息提示栏与头图衔接无缝隙 */
+.alert{
+    margin-bottom: 0px;
+}
+/* --------------navbar、footer、flash部分 end--------------- */
+
+
+/* ------------------ 注册 登陆 --------------- */
+.session-back {
+    background-image:url('http://ww4.sinaimg.cn/large/006tKfTcgy1fezbn74vekj319u0uk40g.jpg')
+}
+
+.session-text {
+    color: #fff;
+}
+
+.devise-position {
+    padding-right: 30px;
+    margin-right: 80px;
+    margin-bottom: 170px;
+    margin-top: 60px;
+}
+
+.devise-position2 {
+    padding-right: 30px;
+    margin-right: 80px;
+    margin-bottom: 127px;
+    margin-top: 60px;
+}
+/* ------------------ 注册 登陆  end --------------- */
+
+
+
+/* ------------  welcome页面  -----------*/
 /* 自定义首页大图按钮 */
 .jobseek-button, .jobseek-button:hover {
     color: #08EFFA !important;
@@ -66,37 +100,18 @@ footer {
     padding: 10px 30px;
     text-decoration: none !important; /* 去除点击链接时出现的下划线 */
 }
-
-/* 信息提示栏与头图衔接无缝隙 */
-.alert{
-    margin-bottom: 0px;
-}
-
+/* -----轮播图------ */
 .carousel-inner img {
     width: 100%; /* Set width to 100% */
     margin: auto;
 }
 
-h1 {
-    margin: 10px 0 30px 0;
-    letter-spacing: 10px;
-    font-size: 30px;
-    color: #111;
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+  }
 }
-
-h2 {
-    margin: 70px 0 70px 0;
-    font-size: 48px;
-    color: #ffffff;
-    margin-bottom: 30px;
-}
-
-h4 {
-    font-size: 20px;
-    color: #ffffff;
-    line-height: 1.5;
-    font-style: italic;
-}
+/* Hide the carousel text when the screen is less than 600 pixels wide */
 
 .title{
     font-size: 60px;
@@ -120,10 +135,30 @@ h4 {
     margin-top: 50px;
     font-size: 20px;
 }
-.bg-grey {
-    background-color: #f6f6f6;
+
+/* -----字体设置-----*/
+h1.clients-logo {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;
+    font-size: 30px;
+    color: #111;
 }
 
+h2.candidates-review {
+    margin: 70px 0 70px 0;
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+h4.saying {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* -------------除了轮播图的其他部分图片----------- */
 .container {
     padding: 80px 120px;
 }
@@ -140,6 +175,9 @@ h4 {
     border-radius: 0px;
 }
 
+/* ------------  welcome页面   end    -----------*/
+
+/* ------------jobs页面----------- */
 .col-centered {
     float: none;
     margin: 0 auto;
@@ -148,11 +186,6 @@ h4 {
 .job-listings {
     margin-top: 30px;
     margin-bottom: 50px;
-}
-
-.search-box {
-    margin-top: 10px;
-
 }
 
 .col {
@@ -175,11 +208,11 @@ h4 {
     width: 36%;
     padding-top: 10px;
 }
+/* ------------ jobs页面 end ----------*/
 
-.jobdot {
-    color: #000000;
-}
 
+
+/* ------------ admin jobs页面  ----------*/
 .panel {
     margin-top: 20px;
 }
@@ -187,32 +220,4 @@ h4 {
 .button-newjob {
     margin-top: -27px;
 }
-
-.session-back {
-    background-image:url('http://ww4.sinaimg.cn/large/006tKfTcgy1fezbn74vekj319u0uk40g.jpg')
-}
-
-.session-text {
-    color: #fff;
-}
-
-.devise-position {
-    padding-right: 30px;
-    margin-right: 80px;
-    margin-bottom: 170px;
-    margin-top: 60px;
-}
-
-.devise-position2 {
-    padding-right: 30px;
-    margin-right: 80px;
-    margin-bottom: 127px;
-    margin-top: 60px;
-}
-
-@media (max-width: 600px) {
-  .carousel-caption {
-    display: none;
-  }
-}
-/* Hide the carousel text when the screen is less than 600 pixels wide */
+/* ------------ admin jobs页面 end ----------*/

@@ -1,10 +1,18 @@
-<div class="col-md-12">
-  <div class="group">
-    <%= link_to("Edit", edit_job_path(@job), class: "btn btn-primary pull-right") %>
-  </div>
-  <h2><%= @job.title %></h2>
-  <p><%= simple_format(@job.description) %></p>
-  <div class="text-center">
-    <%= link_to("投交简历", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:underline;") %>
+<div class="col-md-8 col-centered">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2>
+        <%= @job.title %>
+        <%= link_to("Edit", edit_job_path(@job), class: "btn btn-primary pull-right") %>
+      </h2>
+    </div>
+    <div class="panel-body">
+      <p><%= simple_format(@job.description) %></p>
+    </div>
+    <div class="panel-footer">
+      <div class="text-center">
+        <%= link_to("投交简历", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:none;") %>
+      </div>
+    </div>
   </div>
 </div>
