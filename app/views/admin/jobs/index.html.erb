@@ -3,7 +3,7 @@
   <div class="panel-heading">
     <h3>
     <div class="button-newjob pull-right">
-      <%= link_to("New Job", new_admin_job_path, :class => "btn btn-default") %>
+      <%= link_to("New Job", new_admin_job_path, :class => "btn btn-primary") %>
     </div>
     <h3>
   </div>
@@ -34,9 +34,9 @@
            <%= link_to("Edit", edit_admin_job_path(job)) %> |
            <%= link_to("Delete", admin_job_path(job), :method => :delete, :data => { :confirm => "Are you sure?"}) %> |
           <% if job.is_hidden %>
-           <%= link_to("Public", publish_admin_job_path(job), :method => :post, class: "btn btn-xs btn-default") %>
+           <%= link_to("Public", publish_admin_job_path(job), :method => :post, class: "btn btn-xs btn-success") %>
            <% else %>
-           <%= link_to("Hidden", hide_admin_job_path(job), :method => :post, class: "btn btn-xs btn-default") %>
+           <%= link_to("Hidden", hide_admin_job_path(job), :method => :post, class: "btn btn-xs btn-info") %>
           <% end %>
          </td>
         <td>
