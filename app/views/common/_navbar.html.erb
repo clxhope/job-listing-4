@@ -5,6 +5,7 @@
       <a class="navbar-brand" href="/">FODEJO</a>
     </div>
 
+
     <!--Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
@@ -26,6 +27,12 @@
            </li>
         <% end %>
       </ul>
+      
+      <!--搜索栏-->
+      <div class="navbar-form pull-right">
+          <%= render :partial => "jobs/search_bar" %>
+      </div>
+
     </div>
     <!-- /.navbar-collapse -->
   </div>
