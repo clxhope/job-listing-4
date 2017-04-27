@@ -7,10 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #这个种子档会建立一个admin账号，并创建10个pulic jobs和10个hidden jobs。
-User.create!(email: 'admin@test.com',
-            is_admin: true,
-            password: '123456',
-            password_confirmation: '123456')
+
 
 job_info_public = [
   'SETTLEMENT CLERK',
