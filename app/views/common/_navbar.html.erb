@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if !current_user %>
-           <li><%= link_to("SUGNUP", new_user_registration_path) %></li>
+           <li><%= link_to("SIGNUP", new_user_registration_path) %></li>
            <li><%= link_to("LOGIN", new_user_session_path) %></li>
          <% else %>
            <li class="dropdown">
@@ -27,7 +27,7 @@
            </li>
         <% end %>
       </ul>
-      
+
       <!--搜索栏-->
       <div class="navbar-form pull-right">
           <%= render :partial => "jobs/search_bar" %>
