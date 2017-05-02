@@ -5,26 +5,31 @@
     </div> -->
 
 
-  <!-- <div class="panel panel-default">
-    <div class="panel-content">
+  <div class="panel panel-default">
+    <div class="panel-body">
       <td><strong>工作地点：</strong></td>
+      <td><%= link_to("不限", jobs_path, class: "btnsize btn btn-default") %></td>
+      <td><%= link_to("北京", jobs_path(:city => "北京"), class: "btnsize btn btn-default") %></td>
+      <td><%= link_to("上海", jobs_path(:city => "上海"),  class: "btnsize btn btn-default") %></td>
+      <td><%= link_to("深圳", jobs_path(:city => "深圳"),  class: "btnsize btn btn-default") %></td>
+      <td><%= link_to("广州", jobs_path(:city => "广州"),  class: "btnsize btn btn-default") %></td>
     </div>
-    <div class="panel-content">
+    <div class="panel-body">
       <td><strong>工作经验：</strong></td>
     </div>
-    <div class="panel-content">
+    <div class="panel-body">
       <td><strong>学历要求：</strong></td>
     </div>
-  </div> -->
+  </div>
 
 
 <div class="paixu panel">
   <div class="panel-body">
     <tr>
       <td><strong>排序方式：</strong></td>
-      <td><%= link_to("最新", jobs_path, class: "btnsize btn btn-info") %></td>
-      <td><%= link_to("薪资下限", jobs_path(:order => "by_lower_bound"), class: "btnsize btn btn-info") %></td>
-      <td><%= link_to("薪资上限", jobs_path(:order => "by_upper_bound"), class: "btnsize btn btn-info") %></td>
+      <td><%= link_to("最新", jobs_path(:city => @city), class: "btnsize btn btn-info") %></td>
+      <td><%= link_to("薪资下限", jobs_path(:city => @city, :order => "by_lower_bound"), class: "btnsize btn btn-info") %></td>
+      <td><%= link_to("薪资上限", jobs_path(:city => @city, :order => "by_upper_bound"), class: "btnsize btn btn-info") %></td>
     </tr>
   </div>
 </div>

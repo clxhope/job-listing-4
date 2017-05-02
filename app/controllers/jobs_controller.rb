@@ -2,14 +2,21 @@ class JobsController < ApplicationController
   before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy]
   before_action :find_job_and_check_permission, only: [:edit, :update, :destroy]
   before_action :validate_search_key, only: [:search]
+
   def index
+    @jobs = Job.published
+    if params[:city].present?
+      @city = params[:city]
+      @jobs = @jobs.where(:city => @city)
+    end
+
     @jobs = case params[:order]
             when 'by_lower_bound'
-              Job.published.order("wage_lower_bound DESC")
+              @jobs.order("wage_lower_bound DESC")
             when 'by_upper_bound'
-              Job.published.order("wage_upper_bound DESC")
+              @jobs.order("wage_upper_bound DESC")
             else
-              Job.published.recent
+              @jobs.recent
             end
   end
 
@@ -82,6 +89,6 @@ class JobsController < ApplicationController
   end
 
   def job_params
-    params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden)
+    params.require(:job).permit(:title, :description, :city, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden)
   end
 end
