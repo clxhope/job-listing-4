@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #这个种子档会建立一个admin账号，并创建10个pulic jobs和10个hidden jobs。
-User.create!(email: 'admin@test.com',
-            is_admin: 'true',
-            password: '123456',
-            password_confirmation: '123456')
+# User.create!(email: 'admin@test.com',
+#             is_admin: 'true',
+#             password: '123456',
+#             password_confirmation: '123456')
 
 job_info_public = [
   'SETTLEMENT CLERK',
@@ -45,6 +45,13 @@ location = [
   '广州'
 ]
 
+background = [
+  '大专',
+  '本科',
+  '硕士',
+  '博士',
+]
+
 job_con_public = [
   'Our client is a brokerage firm。',
   'Our client is a leading supplier of mold prevention packaging material for the shoe, apparel, bag and accessories industries.',
@@ -73,11 +80,11 @@ job_con_hidden = [
 
 
 create_jobs = for i in 1..10 do
-                Job.create!([title: job_info_public[i-1], description: job_con_public[i-1], city: location[rand(location.length)], wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'false'])
+                Job.create!([title: job_info_public[i-1], description: job_con_public[i-1], city: location[rand(location.length)], education: background[rand(background.length)], wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'false'])
               end
 
               for i in 1..10 do
-                Job.create!([title: job_info_hidden[i-1], description: job_con_hidden[i-1], city: location[rand(location.length)], wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'true'])
+                Job.create!([title: job_info_hidden[i-1], description: job_con_hidden[i-1], city: location[rand(location.length)], education: background[rand(background.length)], wage_upper_bound: rand(40..79) * 1000, wage_lower_bound: rand(20..39) * 1000, is_hidden: 'true'])
               end
 
 puts '10 Public jobs created.'

@@ -10,6 +10,11 @@ class JobsController < ApplicationController
       @jobs = @jobs.where(:city => @city)
     end
 
+    if params[:education].present?
+      @education =  params[:education]
+      @jobs = @jobs.where(:education => @education)
+    end
+
     @jobs = case params[:order]
             when 'by_lower_bound'
               @jobs.order("wage_lower_bound DESC")
